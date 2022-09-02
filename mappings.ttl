@@ -1,0 +1,651 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ht: <http://www.w3.org/2006/http#> .
+@prefix schema: <https://schema.org/> .
+@prefix m4s: <https://meme4.science/> .
+@prefix kym: <https://knowyourmeme.com/memes/> .
+@prefix dbp: <https://dbpedia.org/property/> .
+@prefix wiki: <https://www.wikidata.org/wiki/> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix wdp: <https://www.wikidata.org/wiki/Property:> .
+
+map:map_aliases_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "aliases" ;
+	rr:predicateObjectMap map:pom_000 ;
+	rr:subjectMap map:s_000 .
+
+map:map_kym_000 rml:logicalSource map:source_009 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "kym" ;
+	rr:predicateObjectMap map:pom_011, map:pom_012, map:pom_013, map:pom_014, map:pom_015, map:pom_016, map:pom_017, map:pom_018, map:pom_019, map:pom_020, map:pom_021, map:pom_022, map:pom_023, map:pom_024, map:pom_025, map:pom_026 ;
+	rr:subjectMap map:s_009 .
+
+map:map_kym_001 rml:logicalSource map:source_010 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "kym" ;
+	rr:predicateObjectMap map:pom_027, map:pom_028, map:pom_029, map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037, map:pom_038, map:pom_039, map:pom_040, map:pom_041, map:pom_042 ;
+	rr:subjectMap map:s_010 .
+
+map:map_spotlight2_000 rml:logicalSource map:source_007 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "spotlight2" ;
+	rr:predicateObjectMap map:pom_009 ;
+	rr:subjectMap map:s_007 .
+
+map:map_spotlight2_001 rml:logicalSource map:source_008 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "spotlight2" ;
+	rr:predicateObjectMap map:pom_010 ;
+	rr:subjectMap map:s_008 .
+
+map:map_spotlight_000 rml:logicalSource map:source_005 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "spotlight" ;
+	rr:predicateObjectMap map:pom_005, map:pom_006 ;
+	rr:subjectMap map:s_005 .
+
+map:map_spotlight_001 rml:logicalSource map:source_006 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "spotlight" ;
+	rr:predicateObjectMap map:pom_007, map:pom_008 ;
+	rr:subjectMap map:s_006 .
+
+map:map_vision2_000 rml:logicalSource map:source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "vision2" ;
+	rr:predicateObjectMap map:pom_003 ;
+	rr:subjectMap map:s_003 .
+
+map:map_vision2_001 rml:logicalSource map:source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "vision2" ;
+	rr:predicateObjectMap map:pom_004 ;
+	rr:subjectMap map:s_004 .
+
+map:map_vision_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "vision" ;
+	rr:predicateObjectMap map:pom_001 ;
+	rr:subjectMap map:s_001 .
+
+map:map_vision_001 rml:logicalSource map:source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "vision" ;
+	rr:predicateObjectMap map:pom_002 ;
+	rr:subjectMap map:s_002 .
+
+map:om_000 rml:reference "kym" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_001 rdf:type rr:ObjectMap ;
+	rr:template "https://www.wikidata.org/wiki/{labelAnnotations[*].qid}" ;
+	rr:termType rr:IRI .
+
+map:om_002 rdf:type rr:ObjectMap ;
+	rr:template "https://www.wikidata.org/wiki/{labelAnnotations[*].qid}" ;
+	rr:termType rr:IRI .
+
+map:om_003 rml:reference "mid" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_004 rml:reference "mid" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_005 rml:reference "@confidence" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_006 rml:reference "Resources[*].QID" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_007 rml:reference "@confidence" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_008 rml:reference "Resources[*].QID" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_009 rml:reference "@typeList" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_010 rml:reference "@typeList" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_011 rdf:type rr:ObjectMap ;
+	rr:template "https://knowyourmeme.com/memes/{category}" ;
+	rr:termType rr:IRI .
+
+map:om_012 rml:reference "title" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_013 rml:reference "tags" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_014 rml:reference "parent" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_015 rml:reference "children" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_016 rml:reference "details.type" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_017 rml:reference "last_update_source" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:timestamp ;
+	rr:termType rr:Literal .
+
+map:om_018 rml:reference "added" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:timestamp ;
+	rr:termType rr:Literal .
+
+map:om_019 rml:reference "details.status" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_020 rml:reference "details.origin" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_021 rml:reference "details.year" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_022 rml:reference "siblings" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_023 rml:reference "content.about.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_024 rml:reference "content.origin.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_025 rml:reference "content.spread.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_026 rml:reference "content.subsections.usage.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_027 rdf:type rr:ObjectMap ;
+	rr:template "https://knowyourmeme.com/memes/{category}" ;
+	rr:termType rr:IRI .
+
+map:om_028 rml:reference "title" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_029 rml:reference "tags" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_030 rml:reference "parent" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_031 rml:reference "children" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_032 rml:reference "details.type" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_033 rml:reference "last_update_source" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:timestamp ;
+	rr:termType rr:Literal .
+
+map:om_034 rml:reference "added" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:timestamp ;
+	rr:termType rr:Literal .
+
+map:om_035 rml:reference "details.status" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_036 rml:reference "details.origin" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_037 rml:reference "details.year" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_038 rml:reference "siblings" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_039 rml:reference "content.about.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_040 rml:reference "content.origin.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_041 rml:reference "content.spread.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_042 rml:reference "content.subsections.usage.text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant wiki:Property:P6760 .
+
+map:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant m4s:fromImage .
+
+map:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant m4s:fromImage .
+
+map:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant wiki:Property:P646 .
+
+map:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant wiki:Property:P646 .
+
+map:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant dbp:confidence .
+
+map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant m4s:fromAbout .
+
+map:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant dbp:confidence .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant m4s:fromAbout .
+
+map:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant m4s:entity_types .
+
+map:pm_010 rdf:type rr:PredicateMap ;
+	rr:constant m4s:entity_types .
+
+map:pm_011 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_012 rdf:type rr:PredicateMap ;
+	rr:constant kym:title .
+
+map:pm_013 rdf:type rr:PredicateMap ;
+	rr:constant kym:tag .
+
+map:pm_014 rdf:type rr:PredicateMap ;
+	rr:constant kym:parent .
+
+map:pm_015 rdf:type rr:PredicateMap ;
+	rr:constant kym:children .
+
+map:pm_016 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_017 rdf:type rr:PredicateMap ;
+	rr:constant kym:last_update_source .
+
+map:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant kym:added .
+
+map:pm_019 rdf:type rr:PredicateMap ;
+	rr:constant kym:status .
+
+map:pm_020 rdf:type rr:PredicateMap ;
+	rr:constant kym:from .
+
+map:pm_021 rdf:type rr:PredicateMap ;
+	rr:constant kym:year .
+
+map:pm_022 rdf:type rr:PredicateMap ;
+	rr:constant kym:sibling .
+
+map:pm_023 rdf:type rr:PredicateMap ;
+	rr:constant kym:about .
+
+map:pm_024 rdf:type rr:PredicateMap ;
+	rr:constant kym:origin .
+
+map:pm_025 rdf:type rr:PredicateMap ;
+	rr:constant kym:spread .
+
+map:pm_026 rdf:type rr:PredicateMap ;
+	rr:constant kym:subsections .
+
+map:pm_027 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_028 rdf:type rr:PredicateMap ;
+	rr:constant kym:title .
+
+map:pm_029 rdf:type rr:PredicateMap ;
+	rr:constant kym:tag .
+
+map:pm_030 rdf:type rr:PredicateMap ;
+	rr:constant kym:parent .
+
+map:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant kym:children .
+
+map:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant kym:last_update_source .
+
+map:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant kym:added .
+
+map:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant kym:status .
+
+map:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant kym:from .
+
+map:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant kym:year .
+
+map:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant kym:sibling .
+
+map:pm_039 rdf:type rr:PredicateMap ;
+	rr:constant kym:about .
+
+map:pm_040 rdf:type rr:PredicateMap ;
+	rr:constant kym:origin .
+
+map:pm_041 rdf:type rr:PredicateMap ;
+	rr:constant kym:spread .
+
+map:pm_042 rdf:type rr:PredicateMap ;
+	rr:constant kym:subsections .
+
+map:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_000 ;
+	rr:predicateMap map:pm_000 .
+
+map:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_001 ;
+	rr:predicateMap map:pm_001 .
+
+map:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_002 ;
+	rr:predicateMap map:pm_002 .
+
+map:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_003 ;
+	rr:predicateMap map:pm_003 .
+
+map:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_004 ;
+	rr:predicateMap map:pm_004 .
+
+map:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_005 ;
+	rr:predicateMap map:pm_005 .
+
+map:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_006 ;
+	rr:predicateMap map:pm_006 .
+
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
+map:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_009 ;
+	rr:predicateMap map:pm_009 .
+
+map:pom_010 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_010 ;
+	rr:predicateMap map:pm_010 .
+
+map:pom_011 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_011 ;
+	rr:predicateMap map:pm_011 .
+
+map:pom_012 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_012 ;
+	rr:predicateMap map:pm_012 .
+
+map:pom_013 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_013 ;
+	rr:predicateMap map:pm_013 .
+
+map:pom_014 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_014 ;
+	rr:predicateMap map:pm_014 .
+
+map:pom_015 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_015 ;
+	rr:predicateMap map:pm_015 .
+
+map:pom_016 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_016 ;
+	rr:predicateMap map:pm_016 .
+
+map:pom_017 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_017 ;
+	rr:predicateMap map:pm_017 .
+
+map:pom_018 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_018 ;
+	rr:predicateMap map:pm_018 .
+
+map:pom_019 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_019 ;
+	rr:predicateMap map:pm_019 .
+
+map:pom_020 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_020 ;
+	rr:predicateMap map:pm_020 .
+
+map:pom_021 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_021 ;
+	rr:predicateMap map:pm_021 .
+
+map:pom_022 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_022 ;
+	rr:predicateMap map:pm_022 .
+
+map:pom_023 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_023 ;
+	rr:predicateMap map:pm_023 .
+
+map:pom_024 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_024 ;
+	rr:predicateMap map:pm_024 .
+
+map:pom_025 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_025 ;
+	rr:predicateMap map:pm_025 .
+
+map:pom_026 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_026 ;
+	rr:predicateMap map:pm_026 .
+
+map:pom_027 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_027 ;
+	rr:predicateMap map:pm_027 .
+
+map:pom_028 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_028 ;
+	rr:predicateMap map:pm_028 .
+
+map:pom_029 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_029 ;
+	rr:predicateMap map:pm_029 .
+
+map:pom_030 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_030 ;
+	rr:predicateMap map:pm_030 .
+
+map:pom_031 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_031 ;
+	rr:predicateMap map:pm_031 .
+
+map:pom_032 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_032 ;
+	rr:predicateMap map:pm_032 .
+
+map:pom_033 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_033 ;
+	rr:predicateMap map:pm_033 .
+
+map:pom_034 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_034 ;
+	rr:predicateMap map:pm_034 .
+
+map:pom_035 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_035 ;
+	rr:predicateMap map:pm_035 .
+
+map:pom_036 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_036 ;
+	rr:predicateMap map:pm_036 .
+
+map:pom_037 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_037 ;
+	rr:predicateMap map:pm_037 .
+
+map:pom_038 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_038 ;
+	rr:predicateMap map:pm_038 .
+
+map:pom_039 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_039 ;
+	rr:predicateMap map:pm_039 .
+
+map:pom_040 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_040 ;
+	rr:predicateMap map:pm_040 .
+
+map:pom_041 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_041 ;
+	rr:predicateMap map:pm_041 .
+
+map:pom_042 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_042 ;
+	rr:predicateMap map:pm_042 .
+
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_aliases_000, map:map_kym_000, map:map_kym_001, map:map_spotlight2_000, map:map_spotlight2_001, map:map_spotlight_000, map:map_spotlight_001, map:map_vision2_000, map:map_vision2_001, map:map_vision_000, map:map_vision_001 ;
+	rdf:type <http://rdfs.org/ns/void#Dataset> .
+
+map:s_000 rml:reference "qid" ;
+	rdf:type rr:SubjectMap .
+
+map:s_001 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:s_002 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:s_003 rdf:type rr:SubjectMap ;
+	rr:template "https://www.wikidata.org/wiki/{qid}" .
+
+map:s_004 rdf:type rr:SubjectMap ;
+	rr:template "https://www.wikidata.org/wiki/{qid}" .
+
+map:s_005 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:s_006 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:s_007 rml:reference "@URI" ;
+	rdf:type rr:SubjectMap .
+
+map:s_008 rml:reference "@URI" ;
+	rdf:type rr:SubjectMap .
+
+map:s_009 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:s_010 rml:reference "url" ;
+	rdf:type rr:SubjectMap .
+
+map:source_000 rml:referenceFormulation ql:CSV ;
+	rml:source "aliases.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "wiki.kym.vision.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_002 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "siblings.kym.vision.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_003 rml:iterator "$[*].labelAnnotations[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "wiki.kym.vision.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_004 rml:iterator "$[*].labelAnnotations[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "siblings.kym.vision.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_005 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "wiki.kym.spotlight.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_006 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "siblings.kym.spotlight.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_007 rml:iterator "$[*].Resources[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "wiki.kym.spotlight.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_008 rml:iterator "$[*].Resources[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "siblings.kym.spotlight.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_009 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "wiki.kym.memes.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_010 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "siblings.kym.memes.json" ;
+	rdf:type rml:LogicalSource .
+

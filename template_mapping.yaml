@@ -1,0 +1,88 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ dbp: "https://dbpedia.org/property/"
+ wiki: "https://www.wikidata.org/wiki/"
+ dbo: "https://dbpedia.org/ontology/"
+ schema: "https://schema.org/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+
+mappings:
+  aliases:
+    sources:
+        - ['aliases.csv~csv']
+    s: $(qid)
+    po:
+      - p: wdp:P6760
+        o: $(kym)~iri
+  vision:
+    sources:
+      - ['wiki.kym.vision.json~jsonpath', '$[*]']
+      - ['siblings.kym.vision.json~jsonpath', '$[*]']
+    s: $(url)
+    po:
+       - p: m4s:fromImage
+         o: wiki:$(labelAnnotations[*].qid)~iri
+  vision2:
+    sources:
+      - ['wiki.kym.vision.json~jsonpath', '$[*].labelAnnotations[*]']
+      - ['siblings.kym.vision.json~jsonpath', '$[*].labelAnnotations[*]']
+    s: wiki:$(qid)
+    po:
+       - p: wdp:P646
+         o: 
+            value: $(mid)  
+  spotlight:
+    sources:
+      - ['wiki.kym.spotlight.json~jsonpath', '$[*]']
+      - ['siblings.kym.spotlight.json~jsonpath', '$[*]']
+    s: $(url)
+    po: 
+      - [dbp:confidence, $(@confidence)]
+      - p: m4s:fromAbout
+        o: $(Resources[*].QID~iri)
+  spotlight2:
+    sources:
+      - ['wiki.kym.spotlight.json~jsonpath', '$[*].Resources[*]']
+      - ['siblings.kym.spotlight.json~jsonpath', '$[*].Resources[*]']
+    s: $(@URI)
+    po: 
+      - [m4s:entity_types, $(@typeList)~iri]
+  kym:
+    sources:
+      - ['wiki.kym.memes.json~jsonpath', '$[*]']
+      - ['siblings.kym.memes.json~jsonpath', '$[*]']
+    s: $(url)
+    po:
+      - [a, kym:$(category)~iri]
+      - [kym:title, $(title)]
+      - [kym:tag, $(tags)]
+      - [kym:parent, $(parent)~iri]
+      - [kym:children, $(children)~iri]
+      - p: a
+        o: $(details.type)
+      - p: kym:last_update_source
+        o: 
+            value: $(last_update_source)
+            datatype: xsd:timestamp
+      - p: kym:added
+        o: 
+            value: $(added)
+            datatype: xsd:timestamp
+      - p: kym:status
+        o: $(details.status)
+      - p: kym:from
+        o: $(details.origin)
+      - p: kym:year
+        o: $(details.year)
+      - p: kym:sibling
+        o: $(siblings)~iri
+      - p: kym:about
+        o: $(content.about.text)
+      - p: kym:origin
+        o: $(content.origin.text)
+      - p: kym:spread
+        o: $(content.spread.text)
+      - p: kym:subsections
+        o: $(content.subsections.usage.text)
+    
