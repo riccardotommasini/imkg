@@ -1,0 +1,210 @@
+<head>
+            <style> body { margin: 0; } </style>
+            <script src="https://cdn.jsdelivr.net/npm/d3-color@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-interpolate@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3"></script>
+            <script src="https://cdn.jsdelivr.net/npm/d3-scale@4"></script>
+            <script src="https://unpkg.com/force-graph"></script>
+            <!--<script src="../../dist/force-graph.js"></script>-->
+            </head>
+            <body>
+            <div id="graph"></div>
+            <script>        
+               const j = {
+    "links": [
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "kym:object-labeling",
+            "label": "kym:parent",
+            "width": 1.0,
+            "color": 0
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "2017",
+            "label": "kym:year",
+            "width": 1.0,
+            "color": 1
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q1634416",
+            "label": "m4s:fromAbout",
+            "width": 1.0,
+            "color": 2
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q622404",
+            "label": "m4s:fromAbout",
+            "width": 1.0,
+            "color": 2
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q1634416",
+            "label": "m4s:fromTags",
+            "width": 1.0,
+            "color": 3
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q225613",
+            "label": "m4s:fromTags",
+            "width": 1.0,
+            "color": 3
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q2920963",
+            "label": "m4s:fromTags",
+            "width": 1.0,
+            "color": 3
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "Q6002242",
+            "label": "m4s:fromTags",
+            "width": 1.0,
+            "color": 3
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "kym:Meme",
+            "label": "rdf:type",
+            "width": 1.0,
+            "color": 4
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "kymt:image-macro",
+            "label": "rdf:type",
+            "width": 1.0,
+            "color": 4
+        },
+        {
+            "source": "kym:distracted-boyfriend",
+            "target": "kymt:photoshop",
+            "label": "rdf:type",
+            "width": 1.0,
+            "color": 4
+        }
+    ],
+    "nodes": [
+        {
+            "id": "Q1634416",
+            "label": "stock photography",
+            "tooltip": "'stock photography'@en",
+            "color": "#000000",
+            "size": 2.0
+        },
+        {
+            "id": "Q225613",
+            "label": "iStockphoto",
+            "tooltip": "'iStockphoto'@en",
+            "color": "#000000",
+            "size": 2.0
+        },
+        {
+            "id": "Q2920963",
+            "label": "stew",
+            "tooltip": "'stew'@en",
+            "color": "#000000",
+            "size": 2.0
+        },
+        {
+            "id": "Q6002242",
+            "label": "image macro",
+            "tooltip": "'image macro'@en",
+            "color": "#000000",
+            "size": 2.0
+        },
+        {
+            "id": "Q622404",
+            "label": "boyfriend",
+            "tooltip": "'boyfriend'@en",
+            "color": "#000000",
+            "size": 2.0
+        },
+        {
+            "id": "2017",
+            "label": "2017",
+            "tooltip": "2017",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        },
+        {
+            "id": "kym:object-labeling",
+            "label": "kym:object-labeling",
+            "tooltip": "kym:object-labeling",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        },
+        {
+            "id": "kymt:image-macro",
+            "label": "kymt:image-macro",
+            "tooltip": "kymt:image-macro",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        },
+        {
+            "id": "kymt:photoshop",
+            "label": "kymt:photoshop",
+            "tooltip": "kymt:photoshop",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        },
+        {
+            "id": "kym:Meme",
+            "label": "kym:Meme",
+            "tooltip": "kym:Meme",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        },
+        {
+            "id": "kym:distracted-boyfriend",
+            "label": "kym:distracted-boyfriend",
+            "tooltip": "kym:distracted-boyfriend",
+            "size": 2.0,
+            "orig_size": 2.0,
+            "orig_color": "#000000"
+        }
+    ]
+}
+              const Graph = ForceGraph()
+              (document.getElementById('graph'))
+                .graphData(j)
+                .nodeId('id')
+                .nodeLabel('tooltip')
+                .nodeVal('size')
+                        .nodeAutoColorBy('group')
+                        .linkWidth((link) => link.width)
+                  .linkDirectionalArrowLength(6)
+                  .linkDirectionalArrowRelPos(1)
+                            .nodeCanvasObject((node, ctx, globalScale) => {
+                      const label = node.label;
+                      const fontSize = 12/globalScale;
+                      ctx.font = `${fontSize}px Sans-Serif`;
+                      const textWidth = ctx.measureText(label).width;
+                      const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
+                      
+                      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                      ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - 10 - 
+                      bckgDimensions[1] / 2, ...bckgDimensions);
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'middle';
+                      
+                        ctx.fillStyle = (node.color);
+                        
+                      ctx.fillText(label, node.x, node.y - 10);
+                      
+                      ctx.beginPath(); ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI, false);  ctx.fill();
+                      node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
+                      })        
+                .linkColor((link) => link.color[0] == "#" ? link.color : d3.schemeDark2[link.color])  </script>
+            </body>
