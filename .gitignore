@@ -8,3 +8,4 @@ linkage/rdf/*
 other
 
 .DS_Store
+.ipynb_checkpoints/
