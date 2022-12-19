@@ -1,0 +1,13 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ dbp: "https://dbpedia.org/property/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+ imgflip: "https://imgflip.com/"
+mappings:
+ children:
+    sources:
+      - ['kym2imgflip.v1.csv~csv']
+    s: $(imgflip)
+    po:
+      - [m4s:templateOf, $(kym)~iri]

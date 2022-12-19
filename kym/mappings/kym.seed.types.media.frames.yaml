@@ -1,0 +1,20 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ kymt: "https://knowyourmeme.com/types/"
+
+ dbp: "https://dbpedia.org/property/"
+ wiki: "https://www.wikidata.org/wiki/"
+ dbo: "https://dbpedia.org/ontology/"
+ schema: "https://schema.org/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+ skos: "http://www.w3.org/2004/02/skos/core#"
+ rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+
+mappings:
+  kym:
+    sources:
+      - [data/kym.seed.type.media.frames.csv~csv]
+    s: $(meme)
+    po:
+      - [a, $(type)~iri]

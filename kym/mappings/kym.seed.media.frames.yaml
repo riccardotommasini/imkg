@@ -1,0 +1,47 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ dbp: "https://dbpedia.org/property/"
+ wiki: "https://www.wikidata.org/wiki/"
+ dbo: "https://dbpedia.org/ontology/"
+ schema: "https://schema.org/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+ skos: "http://www.w3.org/2004/02/skos/core#"
+ rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+
+mappings:
+  kym:
+    sources:
+      - ['data/kym.seed.media.frames.json~jsonpath', '$[*]']
+    s: $(url)
+    po:
+      - [a, kym:$(category)~iri]
+      - [a, m4s:MediaFrame]
+      - [m4s:title, $(title)]
+      - [m4s:tag, $(tags)]
+      - [skos:broader, $(parent)~iri]
+      - [skos:narrower, $(children)~iri]
+      - p: a
+        o: $(details.type)
+      - p: m4s:last_update_source
+        o: 
+            value: $(last_update_source)
+            datatype: xsd:timestamp
+      - p: m4s:added
+        o: 
+            value: $(added)
+            datatype: xsd:timestamp
+      - p: m4s:status
+        o: $(details.status)
+      - p: m4s:from
+        o: $(details.origin)
+      - p: m4s:year
+        o: $(details.year)
+      - p: rdfs:seeAlso
+        o: $(siblings)~iri
+      - p: m4s:about
+        o: $(content.about.fulltext)
+      - p: m4s:origin
+        o: $(content.origin.fulltext)
+      - p: m4s:spread
+        o: $(content.spread.fulltext)

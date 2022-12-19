@@ -1,0 +1,154 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ht: <http://www.w3.org/2006/http#> .
+@prefix m4s: <https://meme4.science/> .
+@prefix kym: <https://knowyourmeme.com/memes/> .
+@prefix dbp: <https://dbpedia.org/property/> .
+@prefix wdp: <https://www.wikidata.org/wiki/Property:> .
+@prefix imgflip: <https://imgflip.com/> .
+
+map:map_imgflip_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "imgflip" ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005, map:pom_006, map:pom_007, map:pom_008 ;
+	rr:subjectMap map:s_000 .
+
+map:map_spotlight_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "spotlight" ;
+	rr:predicateObjectMap map:pom_009 ;
+	rr:subjectMap map:s_001 .
+
+map:om_000 rml:reference "template_title" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_001 rml:reference "template_ID" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_002 rml:reference "turl" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_003 rml:reference "title" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_004 rdf:type rr:ObjectMap ;
+	rr:template "https://imgflip.com/user/{author}" ;
+	rr:termType rr:IRI .
+
+map:om_005 rml:reference "view_count" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_006 rml:reference "upvote_count" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_007 rml:reference "image_url" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:om_008 rml:reference "alt_text" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_009 rml:reference "Resources[*].QID" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:IRI .
+
+map:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:template_title .
+
+map:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:templateId .
+
+map:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:template .
+
+map:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:title .
+
+map:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:author .
+
+map:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:view_count .
+
+map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:upvote_count .
+
+map:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:image_url .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant imgflip:alt_text .
+
+map:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant m4s:fromCaption .
+
+map:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_000 ;
+	rr:predicateMap map:pm_000 .
+
+map:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_001 ;
+	rr:predicateMap map:pm_001 .
+
+map:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_002 ;
+	rr:predicateMap map:pm_002 .
+
+map:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_003 ;
+	rr:predicateMap map:pm_003 .
+
+map:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_004 ;
+	rr:predicateMap map:pm_004 .
+
+map:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_005 ;
+	rr:predicateMap map:pm_005 .
+
+map:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_006 ;
+	rr:predicateMap map:pm_006 .
+
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
+map:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_009 ;
+	rr:predicateMap map:pm_009 .
+
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_imgflip_000, map:map_spotlight_000 ;
+	rdf:type <http://rdfs.org/ns/void#Dataset> .
+
+map:s_000 rml:reference "URL" ;
+	rdf:type rr:SubjectMap .
+
+map:s_001 rml:reference "instance_ID" ;
+	rdf:type rr:SubjectMap .
+
+map:source_000 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "imgflip.json" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:iterator "$[*]" ;
+	rml:referenceFormulation ql:JSONPath ;
+	rml:source "imgflip.spotlight.json" ;
+	rdf:type rml:LogicalSource .
+

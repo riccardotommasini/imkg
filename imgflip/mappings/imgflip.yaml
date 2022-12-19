@@ -1,0 +1,28 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ dbp: "https://dbpedia.org/property/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+ imgflip: "https://imgflip.com/"
+mappings:
+ imgflip:
+    sources:
+      - ['imgflip.json~jsonpath', '$[*]']
+    s: $(URL)
+    po: 
+      - [imgflip:template_title, $(template_title)]
+      - [imgflip:templateId, $(template_ID)]
+      - [imgflip:template, $(turl)~iri]
+      - [imgflip:title, $(title)]
+      - [imgflip:author, https://imgflip.com/user/$(author)~iri]
+      - [imgflip:view_count, $(view_count)]
+      - [imgflip:upvote_count, $(upvote_count)]
+      - [imgflip:image_url, $(image_url)~iri]
+      - [imgflip:caption, $(alt_text)]
+ spotlight:
+    sources:
+      - ['spotlight.json~jsonpath', '$[*]']
+    s: $(instance_ID)
+    po: 
+      - p: m4s:fromCaption
+        o: $(Resources[*].QID~iri)
