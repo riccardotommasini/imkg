@@ -1,0 +1,170 @@
+
+<HTML>
+    <HEAD>
+        <meta charset="UTF-8">
+        <TITLE>The Meme Analytics Project</TITLE>
+        <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+body > * {
+    margin: 0 15;
+    scrollbar-width: none;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: xxx-large;
+}
+.dl {
+    padding: 10;
+    margin: 10;
+    background-color: aliceblue;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: left;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.page h1 {
+    margin-top: 50px;
+}
+
+.page p, ol {
+    -webkit-margin-before: 0.3em;
+            margin-block-start: 0.3em;
+    -webkit-margin-after: 0.3em;
+            margin-block-end: 0.3em;
+
+}
+
+#dls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+}
+
+.contributors {
+    overflow: scroll;
+    margin-top: 50;
+    padding: 10;
+    background-color: aliceblue;
+    border-radius: 15px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+a h2 {
+    text-decoration: none;
+}
+.page {
+    width: 700px;
+    text-align: justify;
+    overflow: scroll;
+    padding-bottom: 100;
+}
+
+        </style>
+        <script>
+        
+function navTo(s) {
+  window.location.href = s + ".html";
+}
+
+        </script>
+    </HEAD>
+    <BODY>
+        <div class="contributors">
+            <h2>Contributors</h2>
+            <div class="contributor"><h3><a href="https://tõnis.ee/">Tõnis Hendrik Hlebnikov</a> </h3></div><div class="contributor"><h3><a href="https://riccardotommasini.com/">Riccardo Tommasini</a></h3></div>
+        </div>
+        <div class="page">
+            <h1>The Meme Analytics Project</h1>
+<p>Memes, as originally defined by Richard Dawkins in 1976, are a "unit of
+cultural transmission, or a unit of imitation". In
+different terms, memes are concepts and customs, patterns and behaviors,
+attitudes and habits - the building blocks of culture, science,
+religion, and even society itself. It is everything that is transmitted
+between individuals by means of imitation, in the loosest definition.
+Dawkins elaborates upon this further by drawing an analogy to genes -
+both being, in a sense, self-replicating entities that propagate
+themselves through people and, thus, through time.</p>
+<p>Understandably, this definition has been a source of much controversy.
+Susan Blackmoore, in her work "The Meme Machine",
+identifies (and argues against) three problems with memes, of which two
+are immediately relevant:</p>
+<ol>
+<li>
+<p>The unit of a meme cannot be specified</p>
+</li>
+<li>
+<p>The mechanism for copying and storing memes is unknown.</p>
+</li>
+</ol>
+<p>This provides clear limitations for quantitative study and is the basis
+of much criticism.</p>
+<h2>Internet memes</h2>
+<p>Patrick Davison, in his 2012 essay <em>The Language of Internet Memes</em>,
+proposes the following definition:</p>
+<p><strong>Definition 1</strong> (Internet meme). a piece of culture, typically a joke,
+which gains influence through online transmission.</p>
+<p>It is important to reinforce that humor is not a requirement, as
+internet memes have also been observed as the vehicle for political
+propaganda, hate speech and
+traumatic confessions. The significant part of this
+definition is <em>online transmission</em>, which requires the meme to be
+encoded into an internet viable medium. Whether this medium is an image,
+text, or video, it is readable data.</p>
+<p>This additional property now allows us to discern discrete units and
+observe the mechanisms of replication and storage in action, at least
+within the online environment - opportunity for quantitative analysis.</p>
+<h2>Image macros</h2>
+<p>A final level of granularity is required to reason about internet memes
+in a sufficiently precise manner. Image macros are perhaps the most
+representative subgenre of internet memes and are often regarded as the
+epitomical internet meme. The singular required property is for the meme
+to be encoded into an image (file). Typically, the resulting image
+consists of:</p>
+<ol>
+<li>
+<p>A background image that is chosen as such that it is immediately
+    recognizable by the intended audience and provides them context</p>
+</li>
+<li>
+<p>Superimposed text as a caption, containing the message and sometimes
+    additional contextual information.</p>
+</li>
+</ol>
+<p>A singular format does not exist; however, most share the property of
+being multimodal constructions of text and image.</p>
+<h2>The Datasets</h2>
+<p>A large volume of data has been amassed. The data was initially scraped from KnowYourMeme.</p>
+<p>Subsequently, data have been enriched  with Google Vision and DBPedia Spotlight - this is truly the one true semantically rich meme dataset to rule them all.</p>
+        </div>
+        <div id="dls">
+            <div class="dl" onclick="navTo('kym_vision')"><h2>Google Vision enrichment</h2><a href="https://owncloud.ut.ee/owncloud/index.php/s/teoFdWKBzzqcFjY">Download</a></div><div class="dl" onclick="navTo('kym_spotlight')"><h2>DBPedia Spotlight enrichment</h2><a href="https://owncloud.ut.ee/owncloud/index.php/s/iMM8crN4AKSpFZZ">Download</a></div><div class="dl" onclick="navTo('kym')"><h2>The original scraped data</h2><a href="https://owncloud.ut.ee/owncloud/index.php/s/g4qB5DZrFEz2XLm">Download</a></div>
+        </div>
+    </BODY>
+</HTML>

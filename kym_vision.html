@@ -1,0 +1,142 @@
+
+<HTML>
+    <HEAD>
+        <TITLE>Google Vision enrichment</TITLE>
+        <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+body > * {
+    margin: 0 15;
+    scrollbar-width: none;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: xxx-large;
+}
+.dl {
+    padding: 10;
+    margin: 10;
+    background-color: aliceblue;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: left;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.page h1 {
+    margin-top: 50px;
+}
+
+.page p, ol {
+    -webkit-margin-before: 0.3em;
+            margin-block-start: 0.3em;
+    -webkit-margin-after: 0.3em;
+            margin-block-end: 0.3em;
+
+}
+
+#dls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: scroll;
+}
+
+.contributors {
+    overflow: scroll;
+    margin-top: 50;
+    padding: 10;
+    background-color: aliceblue;
+    border-radius: 15px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+a h2 {
+    text-decoration: none;
+}
+.page {
+    width: 700px;
+    text-align: justify;
+    overflow: scroll;
+    padding-bottom: 100;
+}
+
+        </style>
+    </HEAD>
+    <BODY>
+        <div class="page">
+        <a href="index.html"><- back</a>
+            <h2>Google Vision enrichment</h2>
+<p>Contains the query results after running all of the meme template images through Google Vision.</p>
+<p>374 MB</p>
+<p>419,002 labels</p>
+<p>197,582 entities</p>
+<p>updated 15.05.2021</p>
+<h3>Schema</h3>
+<ul>
+<li>Label annotations<ul>
+<li>mid - URI</li>
+<li>description</li>
+<li>score</li>
+<li>topicality</li>
+</ul>
+</li>
+<li>Safe search annotations<ul>
+<li>adult</li>
+<li>spoof</li>
+<li>medical</li>
+<li>violence</li>
+<li>racy</li>
+</ul>
+</li>
+<li>Web detection<ul>
+<li>Web entities<ul>
+<li>entityId - URL</li>
+<li>score</li>
+<li>description</li>
+</ul>
+</li>
+<li>Full matching images - not really</li>
+<li>Pages with matching images<ul>
+<li>URL</li>
+<li>Title</li>
+<li>Full matching images</li>
+</ul>
+</li>
+<li>Visually similar images</li>
+<li>Best guess labels<ul>
+<li>label</li>
+<li>language code</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://owncloud.ut.ee/owncloud/index.php/s/teoFdWKBzzqcFjY">Download</a></p>
+        </div>
+    </BODY>
+</HTML>
