@@ -1,0 +1,50 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+      interval: 10s
+      retries: 5
+    restart: on-failure
+  mongo:
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+      - mongoconfig:/data/configdb
+    healthcheck:
+      test: [ "CMD", "mongo", "-eval", "'db.runCommand(\"ping\").ok'", "--quiet" ]
+      interval: 10s
+      retries: 5
+    restart: on-failure
+
+  airflow:
+    image: apache/airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      _AIRFLOW_WWW_USER_USERNAME: memelord
+      _AIRFLOW_WWW_USER_PASSWORD: memelord
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - //var/run/docker.sock://var/run/docker.sock
+      - ./scripts/entrypoint.sh:/entrypoint.sh
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    entrypoint: /entrypoint.sh
+
+
+volumes:
+  mongodata:
+  mongoconfig:
+  postgresdata:
