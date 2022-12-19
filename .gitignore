@@ -1,0 +1,11 @@
+imgflip/data/*
+imgflip/rdf/*
+imkg
+kym/data/*
+kym/rdf/*
+linkage/data/*
+linkage/rdf/*
+other
+
+.DS_Store
+.ipynb_checkpoints/
