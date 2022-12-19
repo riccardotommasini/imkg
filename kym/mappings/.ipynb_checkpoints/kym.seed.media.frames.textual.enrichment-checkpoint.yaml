@@ -1,0 +1,28 @@
+prefixes:
+ m4s: "https://meme4.science/"
+ kym: "https://knowyourmeme.com/memes/"
+ dbp: "https://dbpedia.org/property/"
+ wiki: "https://www.wikidata.org/wiki/"
+ dbo: "https://dbpedia.org/ontology/"
+ schema: "https://schema.org/"
+ wdp: "https://www.wikidata.org/wiki/Property:"
+ skos: "http://www.w3.org/2004/02/skos/core#"
+ rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+
+mappings:
+  spotlight:
+    sources:
+      - ['data/kym.seed.media.frames.textual.enrichment.json~jsonpath', '$[*]']
+    s: $(url)
+    po: 
+      # - [dbp:confidence, $(@confidence)]
+      - p: m4s:fromAbout
+        o: $(Resources[*].QID~iri)
+  tags:
+    sources:
+      - ['data/kym.seed.media.frames.tags.enrichment.json~jsonpath', '$[*]']
+    s: $(url)
+    po: 
+      # - [dbp:confidence, $(@confidence)]
+      - p: m4s:fromAbout
+        o: $(Resources[*].QID~iri)
