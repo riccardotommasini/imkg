@@ -1,2 +1,0 @@
-apache-airflow ~= 2.0.2
-apache-airflow-providers-docker ~= 1.1.0
