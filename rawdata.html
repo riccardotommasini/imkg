@@ -1,7 +1,7 @@
 
 <HTML>
     <HEAD>
-        <TITLE>Google Vision enrichment</TITLE>
+        <TITLE>The original scraped data</TITLE>
         <style>
         
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap');
@@ -90,7 +90,36 @@ a h2 {
     <BODY>
         <div class="page">
         <a href="index.html"><- back</a>
-            <h2>Google Vision enrichment</h2>
+            <h1>The original scraped data</h1>
+<p>These are the original scraped data.</p>
+<h2>KYM</h2>
+<p>This is the raw data from KnowYourMeme.</p>
+<p>177 MB</p>
+<p>28,799 memes</p>
+<p>updated 12.05.2021</p>
+<h3>Schema</h3>
+<ul>
+<li>Title</li>
+<li>Category - content is separated into categories: people, events, and more, in addition to memes.</li>
+<li>Addition timestamp</li>
+<li>Latest update timestamp</li>
+<li>Template image URL</li>
+<li>Status - representing quality control, for example as confirmed, in research or <em>deadpool</em>.</li>
+<li>Origin - meme origin, either as websites or media they are determined to originate from.</li>
+<li>Year</li>
+<li>Type - KnowYourMeme categorizes the memes into distinct types.</li>
+<li>Tags</li>
+<li>Additional references</li>
+<li>Parent - presented as "Part of a series on", representing KnowYourMeme's internal meme taxonomy.</li>
+<li>Siblings - presented as "Related Entries".</li>
+<li>Children - presented as "Related Subentries".</li>
+<li>Search terms - provided in an iFrame to Google Trends.</li>
+</ul>
+<p><a href="https://owncloud.ut.ee/owncloud/index.php/s/g4qB5DZrFEz2XLm">Download</a></p>
+<h2>ImgFlip</h2>
+<h3>Schema</h3>
+<p><a href="https://owncloud.ut.ee/owncloud/s/mFdPCY2mWdQLZ7Q">Download</a></p>
+<h2>Google Vision enrichment</h2>
 <p>Contains the query results after running all of the meme template images through Google Vision.</p>
 <p>374 MB</p>
 <p>419,002 labels</p>
@@ -98,22 +127,18 @@ a h2 {
 <p>updated 15.05.2021</p>
 <h3>Schema</h3>
 <ul>
-<li>Label annotations<ul>
+<li>Label annotations</li>
 <li>mid - URI</li>
 <li>description</li>
 <li>score</li>
 <li>topicality</li>
-</ul>
-</li>
-<li>Safe search annotations<ul>
+<li>Safe search annotations</li>
 <li>adult</li>
 <li>spoof</li>
 <li>medical</li>
 <li>violence</li>
 <li>racy</li>
-</ul>
-</li>
-<li>Web detection<ul>
+<li>Web detection</li>
 <li>Web entities<ul>
 <li>entityId - URL</li>
 <li>score</li>
@@ -134,9 +159,26 @@ a h2 {
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <p><a href="https://owncloud.ut.ee/owncloud/index.php/s/teoFdWKBzzqcFjY">Download</a></p>
+<h2>DBPedia Spotlight enrichment</h2>
+<p>Contains the query results after running all of the meme pages' "about" sections through DBPedia Spotlight.</p>
+<p>17 MB</p>
+<p>38,801 entities</p>
+<p>updated 15.05.2021</p>
+<h3>Schema</h3>
+<ul>
+<li>Input text</li>
+<li>...</li>
+<li>Resources - the detected entities</li>
+<li>URI</li>
+<li>Support</li>
+<li>Types</li>
+<li>Surface form</li>
+<li>Offset</li>
+<li>Similarity score</li>
+<li>Percentage of second rank</li>
+</ul>
+<p><a href="https://owncloud.ut.ee/owncloud/index.php/s/iMM8crN4AKSpFZZ">Download</a></p>
         </div>
     </BODY>
 </HTML>

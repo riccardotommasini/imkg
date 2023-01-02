@@ -12,6 +12,7 @@ main_html, *dl_htmls = [markdown.markdown(md) for md in [main_md, *dl_mds]]
 
 title, *dl_titles = [md.split("\n", 1)[0][2:].strip() for md in [main_md, *dl_mds]]
 
+
 dl_links = [re.search(r"<a.*/a>", md).group(0) for md in dl_htmls]
 
 contributors = re.findall("<li>(.*?)</li>" ,markdown.markdown(open('contributors.md', encoding='utf8').read()))
