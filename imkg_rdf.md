@@ -1,5 +1,7 @@
 # Internet Meme Knowledge Graph (RDF)
 
+- [Download](https://drive.google.com/drive/folders/1ZHzaZVs9kUGYPV4slO4bo6_Y2FM42-yH?usp=share_link)
+
 ## Seed Only
 
 - [ImgFlip Memes](https://drive.google.com/file/d/1hg7MSCcwltUkKeEQj_q7q4oPum_4XTaj/view?usp=share_link)
@@ -46,3 +48,7 @@
 
 - [KYM Types](https://drive.google.com/file/d/1AEWEZEmEcqBS6JkjXu_vuoNOBWGv_-dm/view?usp=share_link)
 
+## Linking Files
+
+- [Template Of](https://drive.google.com/file/d/1TR5Wcw7VvG7pl1Yb6OMo9CEcTBZqOgDy/view?usp=share_link)
+- [Seeds to MediaFrames](https://drive.google.com/file/d/1OzeCXvdLP1-_m686KEVZG2JToIuPLmmi/view?usp=share_link)
