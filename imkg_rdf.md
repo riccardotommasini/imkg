@@ -46,7 +46,3 @@
 
 - [KYM Types](https://drive.google.com/file/d/1AEWEZEmEcqBS6JkjXu_vuoNOBWGv_-dm/view?usp=share_link)
 
-# IMKG LPG (KGTK Format)
-
-- [Knowldege Graph](https://drive.google.com/file/d/12BZz95bU0yDlGhVqR-5wNWbX4y-D2jOz/view?usp=share_link)
-- [Entities](https://drive.google.com/file/d/12BZz95bU0yDlGhVqR-5wNWbX4y-D2jOz/view?usp=share_link)
