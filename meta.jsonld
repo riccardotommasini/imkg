@@ -1,0 +1,326 @@
+[
+    {
+        "@id": "_:b0",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Agent"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "Filip Ilievski"
+            }
+        ],
+        "http://www.w3.org/ns/org#memberOf": [
+            {
+                "@id": "_:b8"
+            }
+        ]
+    },
+    {
+        "@id": "_:b1",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Agent"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "Riccardo Tommasini"
+            }
+        ],
+        "http://www.w3.org/ns/org#memberOf": [
+            {
+                "@id": "_:b9"
+            }
+        ]
+    },
+    {
+        "@id": "_:b10",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Organization"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "Artificial Intelligence Institute of University of South Carolina (AIISC)"
+            }
+        ]
+    },
+    {
+        "@id": "_:b2",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Agent"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "Thilini Wijesiriwardene"
+            }
+        ],
+        "http://www.w3.org/ns/org#memberOf": [
+            {
+                "@id": "_:b10"
+            }
+        ]
+    },
+    {
+        "@id": "_:b3",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Agent"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "Zenodo"
+            }
+        ]
+    },
+    {
+        "@id": "_:b4",
+        "@type": [
+            "http://www.w3.org/ns/adms#Identifier"
+        ],
+        "http://www.w3.org/2004/02/skos/core#notation": [
+            {
+                "@value": "https://zenodo.org/record/7457166",
+                "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+            }
+        ],
+        "http://www.w3.org/ns/adms#schemeAgency": [
+            {
+                "@value": "url"
+            }
+        ]
+    },
+    {
+        "@id": "_:b5",
+        "@type": [
+            "http://www.w3.org/ns/dcat#Distribution"
+        ],
+        "http://www.w3.org/ns/dcat#accessURL": [
+            {
+                "@id": "https://doi.org/10.5281/zenodo.7457166"
+            }
+        ]
+    },
+    {
+        "@id": "_:b6",
+        "@type": [
+            "http://www.w3.org/ns/dcat#Distribution"
+        ],
+        "http://www.w3.org/ns/dcat#accessURL": [
+            {
+                "@id": "https://doi.org/10.5281/zenodo.7457166"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#byteSize": [
+            {
+                "@value": "2176371511"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#downloadURL": [
+            {
+                "@id": "https://zenodo.org/record/7457166/files/imkg.1.0.data.zip"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#mediaType": [
+            {
+                "@value": "application/zip"
+            }
+        ]
+    },
+    {
+        "@id": "_:b7",
+        "@type": [
+            "http://www.w3.org/ns/dcat#Distribution"
+        ],
+        "http://www.w3.org/ns/dcat#accessURL": [
+            {
+                "@id": "https://doi.org/10.5281/zenodo.7457166"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#byteSize": [
+            {
+                "@value": "280352012"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#downloadURL": [
+            {
+                "@id": "https://zenodo.org/record/7457166/files/imkg-1.0.zip"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#mediaType": [
+            {
+                "@value": "application/zip"
+            }
+        ]
+    },
+    {
+        "@id": "_:b8",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Organization"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "USC Information Sciences Institute"
+            }
+        ]
+    },
+    {
+        "@id": "_:b9",
+        "@type": [
+            "http://xmlns.com/foaf/0.1/Organization"
+        ],
+        "http://xmlns.com/foaf/0.1/name": [
+            {
+                "@value": "INSA de Lyon"
+            }
+        ]
+    },
+    {
+        "@id": "http://publications.europa.eu/resource/authority/access-right/PUBLIC"
+    },
+    {
+        "@id": "http://purl.org/dc/dcmitype/Software"
+    },
+    {
+        "@id": "http://purl.org/dc/terms/RightsStatement"
+    },
+    {
+        "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    {
+        "@id": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
+    },
+    {
+        "@id": "http://xmlns.com/foaf/0.1/Organization"
+    },
+    {
+        "@id": "https://doi.org/10.5281/zenodo.7442991"
+    },
+    {
+        "@id": "https://doi.org/10.5281/zenodo.7457166",
+        "@type": [
+            "http://www.w3.org/ns/dcat#Dataset"
+        ],
+        "http://purl.org/dc/terms/type": [
+            {
+                "@id": "http://purl.org/dc/dcmitype/Software"
+            }
+        ],
+        "http://purl.org/dc/terms/identifier": [
+            {
+                "@value": "https://doi.org/10.5281/zenodo.7457166",
+                "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+            }
+        ],
+        "http://xmlns.com/foaf/0.1/page": [
+            {
+                "@id": "https://doi.org/10.5281/zenodo.7457166"
+            }
+        ],
+        "http://purl.org/dc/terms/creator": [
+            {
+                "@id": "_:b0"
+            },
+            {
+                "@id": "_:b1"
+            },
+            {
+                "@id": "_:b2"
+            }
+        ],
+        "http://purl.org/dc/terms/title": [
+            {
+                "@value": "riccardotommasini/imkg: 0.9"
+            }
+        ],
+        "http://purl.org/dc/terms/publisher": [
+            {
+                "@id": "_:b3"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2022",
+                "@type": "http://www.w3.org/2001/XMLSchema#gYear"
+            },
+            {
+                "@value": "2022-12-15",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#sameAs": [
+            {
+                "@id": "https://zenodo.org/record/7457166"
+            }
+        ],
+        "http://www.w3.org/ns/adms#identifier": [
+            {
+                "@id": "_:b4"
+            }
+        ],
+        "http://purl.org/dc/terms/relation": [
+            {
+                "@id": "https://github.com/riccardotommasini/imkg/tree/0.9"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://doi.org/10.5281/zenodo.7442991"
+            }
+        ],
+        "http://www.w3.org/2002/07/owl#versionInfo": [
+            {
+                "@value": "1.0"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "<p>The Internet Memes Knowledge Graph</p>"
+            }
+        ],
+        "http://purl.org/dc/terms/accessRights": [
+            {
+                "@id": "http://publications.europa.eu/resource/authority/access-right/PUBLIC"
+            },
+            {
+                "@id": "info:eu-repo/semantics/openAccess"
+            }
+        ],
+        "http://www.w3.org/ns/dcat#distribution": [
+            {
+                "@id": "_:b5"
+            },
+            {
+                "@id": "_:b6"
+            },
+            {
+                "@id": "_:b7"
+            }
+        ]
+    },
+    {
+        "@id": "https://github.com/riccardotommasini/imkg/tree/0.9"
+    },
+    {
+        "@id": "https://zenodo.org/record/7457166"
+    },
+    {
+        "@id": "https://zenodo.org/record/7457166/files/imkg-1.0.zip"
+    },
+    {
+        "@id": "https://zenodo.org/record/7457166/files/imkg.1.0.data.zip"
+    },
+    {
+        "@id": "info:eu-repo/semantics/openAccess",
+        "@type": [
+            "http://purl.org/dc/terms/RightsStatement"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Open Access"
+            }
+        ]
+    }
+]
