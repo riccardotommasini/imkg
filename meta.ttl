@@ -1,0 +1,75 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns0: <http://www.w3.org/ns/adms#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://doi.org/10.5281/zenodo.7457166>
+  a dcat:Dataset ;
+  dc:type <http://purl.org/dc/dcmitype/Software> ;
+  dc:identifier "https://doi.org/10.5281/zenodo.7457166"^^xsd:anyURI ;
+  foaf:page <https://doi.org/10.5281/zenodo.7457166> ;
+  dc:creator [
+    a foaf:Agent ;
+    foaf:name "Filip Ilievski" ;
+    org:memberOf [
+      a foaf:Organization ;
+      foaf:name "USC Information Sciences Institute"
+    ]
+  ], [
+    a foaf:Agent ;
+    foaf:name "Riccardo Tommasini" ;
+    org:memberOf [
+      a foaf:Organization ;
+      foaf:name "INSA de Lyon"
+    ]
+  ], [
+    a foaf:Agent ;
+    foaf:name "Thilini Wijesiriwardene" ;
+    org:memberOf [
+      a foaf:Organization ;
+      foaf:name "Artificial Intelligence Institute of University of South Carolina (AIISC)"
+    ]
+  ] ;
+  dc:title "riccardotommasini/imkg: 0.9" ;
+  dc:publisher [
+    a foaf:Agent ;
+    foaf:name "Zenodo"
+  ] ;
+  dc:issued "2022"^^xsd:gYear, "2022-12-15"^^xsd:date ;
+  owl:sameAs <https://zenodo.org/record/7457166> ;
+  ns0:identifier [
+    a ns0:Identifier ;
+    skos:notation "https://zenodo.org/record/7457166"^^xsd:anyURI ;
+    ns0:schemeAgency "url"
+  ] ;
+  dc:relation <https://github.com/riccardotommasini/imkg/tree/0.9> ;
+  dc:isVersionOf <https://doi.org/10.5281/zenodo.7442991> ;
+  owl:versionInfo "1.0" ;
+  dc:description "<p>The Internet Memes Knowledge Graph</p>" ;
+  dc:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>, <info:eu-repo/semantics/openAccess> ;
+  dcat:distribution [
+    a dcat:Distribution ;
+    dcat:accessURL <https://doi.org/10.5281/zenodo.7457166>
+  ], [
+    a dcat:Distribution ;
+    dcat:accessURL <https://doi.org/10.5281/zenodo.7457166> ;
+    dcat:byteSize "2176371511" ;
+    dcat:downloadURL <https://zenodo.org/record/7457166/files/imkg.1.0.data.zip> ;
+    dcat:mediaType "application/zip"
+  ], [
+    a dcat:Distribution ;
+    dcat:accessURL <https://doi.org/10.5281/zenodo.7457166> ;
+    dcat:byteSize "280352012" ;
+    dcat:downloadURL <https://zenodo.org/record/7457166/files/imkg-1.0.zip> ;
+    dcat:mediaType "application/zip"
+  ] .
+
+<info:eu-repo/semantics/openAccess>
+  a dc:RightsStatement ;
+  rdfs:label "Open Access" .
+
